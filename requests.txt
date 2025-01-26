@@ -1,0 +1,27 @@
+Example usage of API:
+
+# Create
+curl -X POST -H "Content-Type: application/json" -d '{
+    "user_id": 1, 
+    "name": "Ibuprofen", 
+    "started_at": "2024-12-25 10:30:00", 
+    "dosage": 400, 
+    "note": "Take after meals", 
+    "image": ""
+}' localhost:8081/medications
+
+# Retrieve
+curl -X GET localhost:8081/medications/1
+
+# Update
+curl -X PUT -H "Content-Type: application/json" -d '{
+    "user_id": 1,
+    "name": "Updated Ibuprofen",
+    "started_at": "2025-01-01 10:30:00",
+    "dosage": 500,
+    "note": "Take with water",
+    "image": "base64encodedimagehere=="
+}' localhost:8081/medications/10
+
+# Delete 
+curl -X DELETE localhost:8081/medications/12
