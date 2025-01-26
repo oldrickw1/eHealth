@@ -2,8 +2,17 @@
 
 ## Usage: 
 Run `docker compose up --build` from the project root. The .env file is used to pass the db data. This file is also used in the PHP backend to connect with the mysql db in the contain. 
-On creation of mysql container, the file db/init.sql should run to initialize and seed some records in the db. 
+On creation of mysql container, the file db/init.sql should run to initialize and seed some records in the db (but a data volume is declared so it will persist under db/mysql_data after you make changes).
 You can connect to the app on localhost:8081
+using the paths:
+
+POST /medications
+GET /medications/{user_id}
+PUT /medications/{medication_id}
+DELETE /medications/{medication_id}
+
+See `requests.txt` for some examples. 
+
 
 
 
