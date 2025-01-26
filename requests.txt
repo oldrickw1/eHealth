@@ -20,8 +20,8 @@ curl -X PUT -H "Content-Type: application/json" -d '{
     "started_at": "2025-01-01 10:30:00",
     "dosage": 500,
     "note": "Take with water",
-    "image": "base64encodedimagehere=="
-}' localhost:8081/medications/10
+    "image": ""
+}' localhost:8081/medications/1
 
 # Delete 
 curl -X DELETE localhost:8081/medications/12

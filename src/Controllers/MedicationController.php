@@ -42,7 +42,7 @@ class MedicationController
         }
     }
 
-    public function updateByMedicationById($medication_id, $data = null)
+    public function updateByMedicationId($medication_id, $data = null)
     {
         // This is done for easier testing.
         if (!$data) {
